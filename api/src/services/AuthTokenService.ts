@@ -9,7 +9,7 @@ interface IJwtObject {
   createDate: Date
 }
 
-export const privateKey = 'BassCanyonPrivateKeyForJWT'
+export const privateKey = 'SpendCanyonPrivateKeyForJWT'
 
 class AuthTokenService {
   async create(userId: number): Promise<string> {

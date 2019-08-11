@@ -66,7 +66,7 @@ const dbConfig: IDbConfig = {
       host: '127.0.0.1',
       user: 'donaldma',
       password: 'password',
-      database: 'bc-test',
+      database: 'spend-canyon-test',
       charset: 'utf8',
       timezone: 'UTC',
       typeCast

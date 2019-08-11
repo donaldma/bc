@@ -1,7 +1,7 @@
 {
-  "name": "bc-api",
+  "name": "spend-canyon-api",
   "version": "0.1.0",
-  "description": "Bass Canyon API",
+  "description": "Spend Canyon API",
   "repository": {},
   "author": "Donald Ma",
   "license": "MIT",

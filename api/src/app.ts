@@ -6,6 +6,8 @@ import expressValidator from 'express-validator'
 import RateLimit from 'express-rate-limit'
 // @ts-ignore
 import knexLogger from 'knex-logger'
+import cron from 'node-cron'
+import axios from 'axios'
 
 import ApiController from './controllers/ApiController'
 
@@ -17,6 +19,17 @@ import EnvironmentHelper from './utils/EnvironmentHelper'
 
 // Create Express server
 const app = express()
+
+/**
+ * START CRON JOBS
+ */
+cron.schedule('*/15 * * * *', () => {
+  console.log('Ping App')
+  axios.get('https://spend-canyon.herokuapp.com/')
+})
+/**
+ * END CRON JOBS
+ */
 
 // rate limiter (100 requests every 15 minutes per IP)
 const limiter = new RateLimit({
