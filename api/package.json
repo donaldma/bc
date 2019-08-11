@@ -67,7 +67,8 @@
     "rimraf": "^2.6.3",
     "slack-node": "^0.1.8",
     "stripe": "^7.2.0",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "prettier": "^1.17.1"
   },
   "devDependencies": {
     "@types/async": "^2.0.45",
@@ -96,7 +97,6 @@
     "mocha": "^6.1.4",
     "node-sass": "^4.12.0",
     "nodemon": "^1.18.10",
-    "prettier": "^1.17.1",
     "shelljs": "^0.8.1",
     "source-map-support": "^0.5.12",
     "supertest": "^3.0.0",
