@@ -75,10 +75,10 @@ app.use(RequestErrorHandler)
 
 if (EnvironmentHelper.isProduction()) {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'web/build')))
+  app.use(express.static(path.join(__dirname, '../web/build')))
   // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'web/build', 'index.html'))
+    res.sendFile(path.join(__dirname, '../web/build', 'index.html'))
   })
 }
 
