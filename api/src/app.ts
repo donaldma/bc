@@ -21,17 +21,6 @@ import EnvironmentHelper from './utils/EnvironmentHelper'
 // Create Express server
 const app = express()
 
-/**
- * START CRON JOBS
- */
-cron.schedule('*/15 * * * *', () => {
-  console.log('Ping App')
-  axios.get('https://spend-canyon.herokuapp.com/')
-})
-/**
- * END CRON JOBS
- */
-
 // rate limiter (100 requests every 15 minutes per IP)
 const limiter = new RateLimit({
   windowMs: 15 * 60 * 1000,
@@ -74,7 +63,10 @@ app.use('/api', ApiController)
 app.use(RequestErrorHandler)
 
 if (EnvironmentHelper.isProduction()) {
-  console.log('__dirname', __dirname)
+  cron.schedule('*/15 * * * *', () => {
+    console.log('Ping App')
+    axios.get('https://spend-canyon.herokuapp.com/')
+  })
   // Serve any static files
   app.use(express.static(path.join(__dirname, '/../../web/build')))
   // Handle React routing, return all requests to React app
