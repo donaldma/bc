@@ -64,7 +64,7 @@ app.use(RequestErrorHandler)
 
 if (EnvironmentHelper.isProduction()) {
   cron.schedule('*/15 * * * *', () => {
-    console.log('Ping App')
+    console.log('Ping App (updated)')
     // axios.get('https://spend-canyon.herokuapp.com/')
   })
   // Serve any static files
