@@ -39,7 +39,7 @@ class EditRecord extends React.Component<IProps & RouteComponentProps<IParams>, 
       return this.props.history.push('/records')
     }
 
-    let stateToSet = {}
+    let stateToSet: any = {}
     if (state.item) {
       stateToSet = { ...stateToSet, item: state.item }
     }
