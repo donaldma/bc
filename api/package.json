@@ -75,7 +75,7 @@
     "lodash": "^4.17.15",
     "lusca": "^1.5.2",
     "mailgun-js": "^0.22.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-cron": "^2.0.3",
     "nodemailer": "^4.4.1",
     "passport": "^0.4.0",
